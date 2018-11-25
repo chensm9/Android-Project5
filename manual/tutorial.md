@@ -64,11 +64,16 @@ compile 'com.squareup.okhttp3:okhttp:3.2.0'
 建议同学们多查询相关资料，觉得难以实现的可以使用网络图片获取部分的请求方法，或只使用Retrofit+OkHttp。
 * **RecyclerObj.java**
 
-*Model定义*
-不仅用于展示数据，同时作为RecyclerView的元素。
-先使用POSTMAN等软件模拟发送请求，或直接使用浏览器访问也行，请求格式如下：
-`https://space.bilibili.com/ajax/top/showTop?mid=250858633`
-得到返回的数据结构如下：
+	*Model定义*
+
+	不仅用于展示数据，同时作为RecyclerView的元素。
+
+	先使用POSTMAN等软件模拟发送请求，或直接使用浏览器访问也行，请求格式如下：
+
+	`https://space.bilibili.com/ajax/top/showTop?mid=250858633`
+
+	得到返回的数据结构如下：
+
 	```json
 	{
 		"status": true,
@@ -81,9 +86,13 @@ compile 'com.squareup.okhttp3:okhttp:3.2.0'
 		}
 	}
 	```
+
 根据JSON数据结构设计相应的JAVA类，需要明确指出数据对应关系，如Bool类型，INT类型等，需要引入的包如下。gson为数据解析器，我们需要明确的说明json的字段名。
+
 `import com.google.gson.annotations.SerializedName;`
+
 这种方法比较繁琐，接口更改的时候往往会造成大面积的改动。
+
 最终设计结果如下：
 	```java
 	public class RecyclerObj {  
@@ -104,6 +113,7 @@ compile 'com.squareup.okhttp3:okhttp:3.2.0'
 	    public List<Bitmap> bitmaps = new ArrayList<Bitmap>();  
 	    public Bitmap bitmap;  
 	}
+
 	```
 * **新建接口类，DataService.java**
 需要引入retorfit的相关包
