@@ -37,7 +37,8 @@ style="?android:attr/progressBarStyleSmallTitle"
 
 ### 3. 网络图片使用
 [参考](https://blog.csdn.net/qq_33200967/article/details/77263062?locationNum=1&fps=1)
-需要明确以下两点
+
+需要明确以下几点
 * 开新线程发送GET请求
 * GET成功后利用handler传递消息
 * 主线程更新UI，隐藏progressBar
@@ -62,11 +63,12 @@ compile 'com.squareup.okhttp3:okhttp:3.2.0'
 本次Retrofit实现较为麻烦，需要写多个文件。
 建议同学们多查询相关资料，觉得难以实现的可以使用网络图片获取部分的请求方法，或只使用Retrofit+OkHttp。
 * **RecyclerObj.java**
+
 *Model定义*
-	不仅用于展示数据，同时作为RecyclerView的元素。
-	先使用POSTMAN等软件模拟发送请求，或直接使用浏览器访问也行，请求格式如下：
-	`https://space.bilibili.com/ajax/top/showTop?mid=250858633`
-	得到返回的数据结构如下：
+不仅用于展示数据，同时作为RecyclerView的元素。
+先使用POSTMAN等软件模拟发送请求，或直接使用浏览器访问也行，请求格式如下：
+`https://space.bilibili.com/ajax/top/showTop?mid=250858633`
+得到返回的数据结构如下：
 	```json
 	{
 		"status": true,
@@ -79,10 +81,10 @@ compile 'com.squareup.okhttp3:okhttp:3.2.0'
 		}
 	}
 	```
-	根据JSON数据结构设计相应的JAVA类，需要明确指出数据对应关系，如Bool类型，INT类型等，需要引入的包如下。gson为数据解析器，我们需要明确的说明json的字段名。
-	`import com.google.gson.annotations.SerializedName;`
-	这种方法比较繁琐，接口更改的时候往往会造成大面积的改动。
-	最终设计结果如下：
+根据JSON数据结构设计相应的JAVA类，需要明确指出数据对应关系，如Bool类型，INT类型等，需要引入的包如下。gson为数据解析器，我们需要明确的说明json的字段名。
+`import com.google.gson.annotations.SerializedName;`
+这种方法比较繁琐，接口更改的时候往往会造成大面积的改动。
+最终设计结果如下：
 	```java
 	public class RecyclerObj {  
 	    @SerializedName("status")  
@@ -104,13 +106,13 @@ compile 'com.squareup.okhttp3:okhttp:3.2.0'
 	}
 	```
 * **新建接口类，DataService.java**
-	需要引入retorfit的相关包
-	由于本次基本作业只使用了一个API，故可以将请求URL主体部分分隔开，@Query为请求参数
-	`import retrofit2.http.GET;`  
-	`import retrofit2.http.Query;`
-	利用RXJAVA时还需要引入
-	`import rx.Observable;`
-	最终结果如下：
+需要引入retorfit的相关包
+由于本次基本作业只使用了一个API，故可以将请求URL主体部分分隔开，@Query为请求参数
+`import retrofit2.http.GET;`  
+`import retrofit2.http.Query;`
+利用RXJAVA时还需要引入
+`import rx.Observable;`
+最终结果如下：
 	```java
 	public interface DataService {  
     @GET("showTop")  
@@ -118,7 +120,7 @@ compile 'com.squareup.okhttp3:okhttp:3.2.0'
 	}
 	```
 * **MainActivity调用接口**
-	这里使用了RXJAVA的观察发布者模式。
+这里使用了RXJAVA的观察发布者模式。
 	```java
 	dataService.getUser(text)  
         .subscribeOn(Schedulers.newThread())  
@@ -131,7 +133,7 @@ compile 'com.squareup.okhttp3:okhttp:3.2.0'
 			……oncompleted，结束时
 	});
 	```
-	dataSerevice来源于retrofit,DataService即为接口类。
+dataSerevice来源于retrofit,DataService即为接口类。
 	```java
 		DataService dataService = retrofit.create(DataService.class);
 	```
@@ -192,7 +194,7 @@ compile 'com.squareup.okhttp3:okhttp:3.2.0'
 ``` 
 上面得到的数据中，image即保存了预览图的相关图片。
 得到的预览图时下面这种jpg格式的图片，对该图片解析保存成数组，根据seekBar位置变换数组下标即可。
-<img src="http://i3.hdslb.com/bfs/videoshot/349.jpg" />
+<img src="/images/349.jpg" />
 
 ### 5.第十四周实验介绍（DEMO暂未更新）
 在此项目基础上，实现摇一摇震动手机并随机搜索user_id的功能。
