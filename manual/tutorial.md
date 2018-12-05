@@ -1,17 +1,17 @@
 
-# ¸öÈËÏîÄ¿5
-# WEB APIÓ¦ÓÃ
+# ä¸ªäººé¡¹ç›®5
+# WEB APIåº”ç”¨
 
-# µÚÊ®ËÄÖÜÈÎÎñ
-## WEB API Ó¦ÓÃ
+# ç¬¬åå››å‘¨ä»»åŠ¡
+## WEB API åº”ç”¨
 ---
-## ²¼¾ÖÖªÊ¶
-### 1. CardView½éÉÜ
-ÒýÈëCardViewÒÀÀµ
+## å¸ƒå±€çŸ¥è¯†
+### 1. CardViewä»‹ç»
+å¼•å…¥CardViewä¾èµ–
 ```java
 compile 'com.android.support:cardview-v7:28.+'
 ```
-±ã¿ÉÒÔÈçÍ¬Ê¹ÓÃÕý³£ÊôÐÔÒ»ÑùÊ¹ÓÃCardViewÁË
+ä¾¿å¯ä»¥å¦‚åŒä½¿ç”¨æ­£å¸¸å±žæ€§ä¸€æ ·ä½¿ç”¨CardViewäº†
 ```xml
 <android.support.v7.widget.CardView  
   app:cardCornerRadius="8dp"  
@@ -22,12 +22,12 @@ compile 'com.android.support:cardview-v7:28.+'
 </android.support.v7.widget.CardView>
 ```
 
-### 2. Progressbar½éÉÜ
-×î¼òµ¥µÄÉèÖÃ¼´¿É£¬ÎÒÃÇÖ»ÐèÒª¸üÐÂÆävisibilityÊôÐÔ¼´¿É£¬ÕâÀïÐèÒªÊ¹ÓÃµ½ÉÏÖÜµÄÖªÊ¶£¬×ÓÏß³Ì¸üÐÂUI¡£
+### 2. Progressbarä»‹ç»
+æœ€ç®€å•çš„è®¾ç½®å³å¯ï¼Œæˆ‘ä»¬åªéœ€è¦æ›´æ–°å…¶visibilityå±žæ€§å³å¯ï¼Œè¿™é‡Œéœ€è¦ä½¿ç”¨åˆ°ä¸Šå‘¨çš„çŸ¥è¯†ï¼Œå­çº¿ç¨‹æ›´æ–°UIã€‚
 ```xml
-<!--ÉèÖÃprogressbarµÄ¸ñÊ½-->
+<!--è®¾ç½®progressbarçš„æ ¼å¼-->
 style="?android:attr/progressBarStyleLarge"
-<!--Ò²¿ÉÒÔÊ¹ÓÃÆäËû¸ñÊ½-->
+<!--ä¹Ÿå¯ä»¥ä½¿ç”¨å…¶ä»–æ ¼å¼-->
 style="?android:attr/progressBarStyleInverse" 
 style="?android:attr/progressBarStyleLargeInverse" 
 style="?android:attr/progressBarStyleSmall" 
@@ -35,70 +35,70 @@ style="?android:attr/progressBarStyleSmallInverse"
 style="?android:attr/progressBarStyleSmallTitle" 
 ```
 
-### 3. ÍøÂçÍ¼Æ¬Ê¹ÓÃ
+### 3. ç½‘ç»œå›¾ç‰‡ä½¿ç”¨
 
-Í¼Æ¬µÄ¸üÐÂ·½·¨²Î¿¼¿Î¼þ£¬Í¼Æ¬µÄurlÐèÒªÌáÇ°Í¨¹ýÆäËû½Ó¿ÚµÃµ½£¬ÐèÒªÃ÷È·ÒÔÏÂ¼¸µã
-* ¿ªÐÂÏß³Ì·¢ËÍGETÇëÇó
-* GET³É¹¦ºóÀûÓÃhandler´«µÝÏûÏ¢
-* Ö÷Ïß³Ì¸üÐÂUI£¬Òþ²ØprogressBar
+å›¾ç‰‡çš„æ›´æ–°æ–¹æ³•å‚è€ƒè¯¾ä»¶ï¼Œå›¾ç‰‡çš„urléœ€è¦æå‰é€šè¿‡å…¶ä»–æŽ¥å£å¾—åˆ°ï¼Œéœ€è¦æ˜Žç¡®ä»¥ä¸‹å‡ ç‚¹
+* å¼€æ–°çº¿ç¨‹å‘é€GETè¯·æ±‚
+* GETæˆåŠŸåŽåˆ©ç”¨handlerä¼ é€’æ¶ˆæ¯
+* ä¸»çº¿ç¨‹æ›´æ–°UIï¼Œéšè—progressBar
 
-## ÍøÂçÇëÇóÖªÊ¶
-### 1. Ñ§Ï°Ê¹ÓÃHttpURLConnection
-* ´´½¨ÐÂÏß³Ì£¬ÔÚÏß³ÌÖÐ½øÐÐÍøÂç·ÃÎÊ·ÀÖ¹×èÈûÖ÷Ïß³Ì
-* ´´½¨Ò»¸öÐÂµÄURL¶ÔÏó
-* ÎªÕâ¸öURL×ÊÔ´´ò¿ªConnection
-* ¶ÁÈ¡Êý¾Ý
-* ·ÃÎÊÍøÂçÊ±ÐèÒª²¶»ñÒì³£
+## ç½‘ç»œè¯·æ±‚çŸ¥è¯†
+### 1. å­¦ä¹ ä½¿ç”¨HttpURLConnection
+* åˆ›å»ºæ–°çº¿ç¨‹ï¼Œåœ¨çº¿ç¨‹ä¸­è¿›è¡Œç½‘ç»œè®¿é—®é˜²æ­¢é˜»å¡žä¸»çº¿ç¨‹
+* åˆ›å»ºä¸€ä¸ªæ–°çš„URLå¯¹è±¡
+* ä¸ºè¿™ä¸ªURLèµ„æºæ‰“å¼€Connection
+* è¯»å–æ•°æ®
+* è®¿é—®ç½‘ç»œæ—¶éœ€è¦æ•èŽ·å¼‚å¸¸
 
-±¾´Î»ù´¡ÄÚÈÝÐèÒª·ÃÎÊµÄ½Ó¿ÚÊÇ
+æœ¬æ¬¡åŸºç¡€å†…å®¹éœ€è¦è®¿é—®çš„æŽ¥å£æ˜¯
 `https://space.bilibili.com/ajax/top/showTop?mid=<user_id>`
-·µ»ØµÄÊý¾Ý½á¹¹¿ÉÒÔ×Ô¼ºÓÃpostman»òä¯ÀÀÆ÷·ÃÎÊ¼´¿É»ñµÃ¡£
+è¿”å›žçš„æ•°æ®ç»“æž„å¯ä»¥è‡ªå·±ç”¨postmanæˆ–æµè§ˆå™¨è®¿é—®å³å¯èŽ·å¾—ã€‚
 
 
-### 2. Ïß³Ì¸üÐÂUI
-Ïß³Ì¸üÐÂUI´æÔÚ¶àÖÖ·½·¨£¬×î¼òµ¥µÄÊÇhandler¡£
-ÔÚÕâ½¨ÒéÊ¹ÓÃRxJava£¬¾ßÌåÊ¹ÓÃ·½·¨ÔÚÉÏ´Î×÷ÒµÒÑ¾­½²¹ýÁË¡£
+### 2. çº¿ç¨‹æ›´æ–°UI
+çº¿ç¨‹æ›´æ–°UIå­˜åœ¨å¤šç§æ–¹æ³•ï¼Œæœ€ç®€å•çš„æ˜¯handlerã€‚
+åœ¨è¿™å»ºè®®ä½¿ç”¨RxJavaï¼Œå…·ä½“ä½¿ç”¨æ–¹æ³•åœ¨ä¸Šæ¬¡ä½œä¸šå·²ç»è®²è¿‡äº†ã€‚
 
-### 3.Json½âÎö
-Õâ´ÎµÃµ½µÄÊý¾ÝÈçÏÂ£º
-`json
+### 3.Jsonè§£æž
+è¿™æ¬¡å¾—åˆ°çš„æ•°æ®å¦‚ä¸‹ï¼š
+```json
  {
  	"status": true,
  	"data": {
  		"aid":30087657,
  		"state":0,
- 		"cover":"¡­¡­",
- 		"title":"»ªÅ©ÐÖµÜ£ºÕâÖ»ÖñÊó´ò¼ÜÊÜÄÚÉË£¬Å©´åÐ¡»ïÖ»ÄÜ°ÑËüÖóÁË£¬Î¶µÀÏÊÄÛ¿É¿Ú"
- 		¡­¡­
+ 		"cover":"â€¦â€¦",
+ 		"title":"åŽå†œå…„å¼Ÿï¼šè¿™åªç«¹é¼ æ‰“æž¶å—å†…ä¼¤ï¼Œå†œæ‘å°ä¼™åªèƒ½æŠŠå®ƒç…®äº†ï¼Œå‘³é“é²œå«©å¯å£"
+ 		â€¦â€¦
  	}
  }
-`
-Ê×ÏÈÎÒÃÇÐèÒªÉùÃ÷Ò»¸öÀà£¬Õâ¸öÀà°üº¬ÁËÎÒÃÇÐèÒªÏÔÊ¾µÄÐÅÏ¢£¬±ÈÈç
-`java
+```
+é¦–å…ˆæˆ‘ä»¬éœ€è¦å£°æ˜Žä¸€ä¸ªç±»ï¼Œè¿™ä¸ªç±»åŒ…å«äº†æˆ‘ä»¬éœ€è¦æ˜¾ç¤ºçš„ä¿¡æ¯ï¼Œæ¯”å¦‚
+```java
 public class RecyclerObj {
     private Boolean status;
     private Data data;
 	public static class Data  {
 		private int aid;
-		¡­¡­//Ê¡ÂÔget setµÈ
+		â€¦â€¦//çœç•¥get setç­‰
 	}
-	¡­¡­//Ê¡ÂÔget£¬set
+	â€¦â€¦//çœç•¥getï¼Œset
 }
-`
-Ö®ºóÖ±½ÓÊ¹ÓÃÕâ¸ö½âÎö¼´¿É¡£
-`java
+```
+ä¹‹åŽç›´æŽ¥ä½¿ç”¨è¿™ä¸ªè§£æžå³å¯ã€‚
+```java
 RecyclerObj recyclerObj = new Gson().fromJson((String)jsonString, RecyclerObj.class);
-`
-½âÎöÐèÒªÓÃµ½Gson£¬ÐèÒªÒýÈëÒÀÀµ
+```
+è§£æžéœ€è¦ç”¨åˆ°Gsonï¼Œéœ€è¦å¼•å…¥ä¾èµ–
 `compile 'com.squareup.retrofit2:converter-gson:2.1.0'`
 
-### 4.¼Ó·ÖÏî
-±¾´Î¼Ó·ÖÏîÖ¼ÔÚÌá¸ßÍøÂç·ÃÎÊÒÔ¼°¶ÔAndroidÏß³Ì»úÖÆµÄÈÏÖª¡£
-ÐèÒª¶îÍâ½øÐÐÁ½´ÎÍøÂçÇëÇóÒÔ¼°¸üÐÂUIµÄ²Ù×÷¡£
-ÐèÒª¸ù¾ÝÉÏÊö½Ó¿ÚµÃµ½µÄaidÏò
+### 4.åŠ åˆ†é¡¹
+æœ¬æ¬¡åŠ åˆ†é¡¹æ—¨åœ¨æé«˜ç½‘ç»œè®¿é—®ä»¥åŠå¯¹Androidçº¿ç¨‹æœºåˆ¶çš„è®¤çŸ¥ã€‚
+éœ€è¦é¢å¤–è¿›è¡Œä¸¤æ¬¡ç½‘ç»œè¯·æ±‚ä»¥åŠæ›´æ–°UIçš„æ“ä½œã€‚
+éœ€è¦æ ¹æ®ä¸Šè¿°æŽ¥å£å¾—åˆ°çš„aidå‘
 `https://api.bilibili.com/pvideo?aid=<aid>`
-ÇëÇóÊý¾Ý£¬¸ñÊ½ÈçÏÂ£¬ÎÒÃÇÐèÒª¸ù¾ÝÀïÃæµÄimage»òÕß¼òµ¥µãÊ¹ÓÃpvdataµÃµ½Ô¤ÀÀÍ¼µÄÐÅÏ¢¡£
-`json
+è¯·æ±‚æ•°æ®ï¼Œæ ¼å¼å¦‚ä¸‹ï¼Œæˆ‘ä»¬éœ€è¦æ ¹æ®é‡Œé¢çš„imageæˆ–è€…ç®€å•ç‚¹ä½¿ç”¨pvdataå¾—åˆ°é¢„è§ˆå›¾çš„ä¿¡æ¯ã€‚
+```json
 {
     "code": 0,
     "message": "0",
@@ -114,5 +114,5 @@ RecyclerObj recyclerObj = new Gson().fromJson((String)jsonString, RecyclerObj.cl
         ],
 	}
 }
-`
-ÔÙÏòÉÏÊöÔ¤ÀÀÍ¼ÇëÇóÊý¾Ý¼´¿É£¬×îºó¸üÐÂBitMap¼´¿ÉÍê³É¡£
+```
+å†å‘ä¸Šè¿°é¢„è§ˆå›¾è¯·æ±‚æ•°æ®å³å¯ï¼Œæœ€åŽæ›´æ–°BitMapå³å¯å®Œæˆã€‚
