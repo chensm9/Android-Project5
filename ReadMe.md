@@ -88,7 +88,49 @@
 ### 第十五周实验目的
 1. 理解Restful接口
 2. 学会使用Retrofit2
-3. 学会使用RxJava
+3. 复习使用RxJava
 4. 学会使用OkHttp
 
-*具体要求之后放出*
+---
+### 基础实验内容
+#### 实现一个github用户repos以及issues应用
+<table>
+    <tr>
+        <td ><img src="/manual/images/img9.png" >主界面有两个跳转按钮分别对应两次作业</td>
+        <td ><img src="/manual/images/img10.png" >github界面，输入用户名搜索该用户所有可提交issue的repo，每个item可点击</td>
+    </tr>
+    <tr>
+        <td ><img src="/manual/images/img11.png" >repo详情界面，显示该repo所有的issues</td>
+        <td ><img src="/manual/images/img12.png" >加分项：在该用户的该repo下增加一条issue，输入title和body即可</td>
+    </tr>
+</table>
+
+* 教程位于`./manual/tutorial_retrofit.md`
+* 每次点击搜索按钮都会清空上次搜索结果再进行新一轮的搜索
+* 获取repos时需要处理以下异常：HTTP 404 以及 用户没有任何repo
+* 只显示 has_issues = true 的repo（即fork的他人的项目不会显示）
+* repo显示的样式自由发挥，显示的内容可以自由增加（不能减少）
+* repo的item可以点击跳转至下一界面
+* 该repo不存在任何issue时需要弹Toast提示
+* 不完成加分项的同学只需要显示所有issues即可，样式自由发挥，内容可以增加
+
+### 加分项
+* 加分项旨在学习Retrofit2的POST请求，加深Rest API的理解
+* demo需要你们额外提供TOKEN参数，这点不必实现，实现了反而不利于检查
+* 提交的代码可以删除掉你的token等授权信息
+* 仅处理提交成功与提交失败两种状态
+* issue提交成功后需要刷新展示出来
+
+* **加分项注意事项**
+* **不要在他人repo下随意提交issue测试，自己新建一个repo即可**
+* **管理好自己的github授权（token，client id等），验收结束后请删除对应授权**
+
+---
+
+**demo为app-retrofit.apk**
+**demo测试于API28**
+**过于频繁的请求会造成403 demo暂时失效的现象**
+
+---
+### 完成期限
+第十六周各班实验课进行检查，未通过者需在下一周进行修改与重新检查。
