@@ -12,6 +12,7 @@
 不完成加分项的同学可以不考虑权限验证等问题。
 但需要注意的是，短时间内的大量请求会造成Github返回403，TA推荐增加请求头解决这个问题，头为Authentication token。
 本次我们需要用到以下几个接口：
+
 |接口|方法|需要的返回字段|备注|
 |--|--|--|--|
 |/users/{用户名}/repos|GET|[{"id", "name","description"，“has_issues”,"open_issues"},{...}]|获得某用户所有repo的简介以及issues数目，非本人项目无法提交issue（比如fork的项目）需要过滤|
