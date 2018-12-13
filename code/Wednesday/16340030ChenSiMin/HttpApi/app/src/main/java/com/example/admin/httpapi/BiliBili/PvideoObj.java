@@ -1,11 +1,10 @@
-package com.example.admin.httpapi;
+package com.example.admin.httpapi.BiliBili;
 
 import java.util.List;
 
 public class PvideoObj {
     public int code;
     public String message;
-    public int ttl;
     private Data data;
     public static class Data {
         public String pvdata;

@@ -1,4 +1,4 @@
-package com.example.admin.httpapi;
+package com.example.admin.httpapi.BiliBili;
 
 import android.graphics.Bitmap;
 
@@ -19,8 +19,6 @@ public class RecyclerObj {
         public String duration;
         public int video_review;
         public String create;
-        public String rec;
-        public int count;
         //省略get set等
     }
 

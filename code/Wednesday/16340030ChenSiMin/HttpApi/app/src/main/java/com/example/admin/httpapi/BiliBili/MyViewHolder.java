@@ -1,4 +1,4 @@
-package com.example.admin.httpapi;
+package com.example.admin.httpapi.BiliBili;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;

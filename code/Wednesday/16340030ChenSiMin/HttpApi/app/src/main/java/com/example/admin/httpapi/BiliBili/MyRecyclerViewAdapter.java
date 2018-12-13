@@ -1,4 +1,4 @@
-package com.example.admin.httpapi;
+package com.example.admin.httpapi.BiliBili;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -9,10 +9,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.SeekBar;
 import android.widget.Toast;
 
+import com.example.admin.httpapi.R;
 import com.google.gson.Gson;
 
 import java.io.BufferedReader;
