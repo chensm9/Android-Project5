@@ -107,8 +107,9 @@ public class IssuesActivity extends AppCompatActivity {
 
                         @Override
                         public void onError(Throwable e) {
-                            Toast.makeText(IssuesActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-                            System.out.println(e.getMessage());
+                            Toast.makeText(IssuesActivity.this, "提交issues失败："+e.getMessage(), Toast.LENGTH_SHORT).show();
+                            findViewById(R.id.recyclerView).setVisibility(View.VISIBLE);
+                            findViewById(R.id.linear2).setVisibility(View.GONE);
                         }
 
                         @Override

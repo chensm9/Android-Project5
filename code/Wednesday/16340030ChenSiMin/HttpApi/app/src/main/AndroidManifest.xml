@@ -14,7 +14,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Github.GithubActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,7 +23,7 @@
         </activity>
         <activity android:name=".BiliBili.BiliBiliActivity"/>
         <activity android:name=".Github.IssuesActivity"/>
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".Github.GithubActivity"/>
     </application>
 
 </manifest>

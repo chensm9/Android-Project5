@@ -5,24 +5,18 @@ import java.util.List;
 import io.reactivex.Observable;
 import okhttp3.RequestBody;
 import retrofit2.http.Body;
+import retrofit2.http.Field;
 import retrofit2.http.GET;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
 
-// 不是Class 而是 interface
 public interface GitHubService {
-    @Headers({
-            "Authorization: token fa6a0f3b4fd5f1a639972a5b7fff2a3a66e660ba"
-    })
+    @Headers("Authorization: token fa6a0f3b4fd5f1a639972a5b7fff2a3a66e660ba")
     @GET("/users/{user_name}/repos")
     Observable<List<RepoItem>> getRepo(@Path("user_name") String user_name);
-    // 特别地，使用rxJava时为
-    // Observable<List<RepoObj>> getRepo(@Path("user_name") String user_name);
 
-    @Headers({
-        "Authorization: token fa6a0f3b4fd5f1a639972a5b7fff2a3a66e660ba"
-    })
+    @Headers("Authorization: token fa6a0f3b4fd5f1a639972a5b7fff2a3a66e660ba")
     @GET("/repos/{user_name}/{repo_name}/issues")
     Observable<List<IssueItem>> getIssue(@Path("user_name") String user_name,
                                    @Path("repo_name") String repo_name);
@@ -33,6 +27,7 @@ public interface GitHubService {
                                     @Path("repo_name") String repo_name,
                                     @Body RequestBody postMessage);
 }
+
 class PostMessage{
     private String title;
     private String body;

@@ -33,7 +33,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class GithubActivity extends AppCompatActivity {
 
-    private static String BASE_URL = "http://api.github.com";
+    private static String BASE_URL = "https://api.github.com";
     private final MyRecyclerViewAdapter myRecyclerViewAdapter = new MyRecyclerViewAdapter<RepoItem>(GithubActivity.this, R.layout.github_repo_item, new ArrayList<RepoItem>()){
         @Override
         public void convert(MyViewHolder holder, RepoItem repo_item) {
@@ -108,7 +108,9 @@ public class GithubActivity extends AppCompatActivity {
                            List<RepoItem> list = new ArrayList<>();
                            myRecyclerViewAdapter.refresh(list);
                            Toast.makeText(GithubActivity.this,
-                                   e.getMessage(), Toast.LENGTH_SHORT).show();
+                                   "该用户不存在", Toast.LENGTH_SHORT).show();
+                           findViewById(R.id.recyclerView).setVisibility(View.VISIBLE);
+                           findViewById(R.id.linear2).setVisibility(View.GONE);
                        }
 
                        @Override
